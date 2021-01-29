@@ -88,7 +88,8 @@ class apim_common inherits apim_common::params {
   # Create symlink to Java binary
   file { "${java_symlink}":
     ensure  => "link",
-    target  => "${java_home}",
+    #target  => "${java_home}",
+    target  => "/opt"
     require => Exec["unpack-jdk"]
   }
 
