@@ -89,7 +89,7 @@ class apim_common inherits apim_common::params {
   file { "${java_symlink}":
     ensure  => "link",
     #target  => "${java_home}",
-    target  => "/opt"
+    target  => "/opt",
     require => Exec["unpack-jdk"]
   }
 
