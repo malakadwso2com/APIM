@@ -143,7 +143,7 @@ class apim_common::params {
   $throttling_url_group = [
     {
       traffic_manager_urls      => '"tcp://localhost:9611"',
-      traffic_manager_auth_urls => '"ssl://localhost:9771"'
+      traffic_manager_auth_urls => '"ssl://localhost:9711"'
     },
 #    {
 #      traffic_manager_urls      => '"tcp://tm2.local:9611"',
