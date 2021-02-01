@@ -388,7 +388,8 @@ auth.configs:
     adminUsername: <%= @admin_service_username %>
     adminPassword: <%= @admin_service_password %>
     kmDcrUrl: <%= @admin_service_url %>/client-registration/v0.16/register
-    kmTokenUrlForRedirection: <%= @admin_service_url %>:9443/oauth2
+    #kmTokenUrlForRedirection: <%= @admin_service_url %>:9443/oauth2
+    kmTokenUrlForRedirection: <%= @admin_service_url %>/oauth2
     kmTokenUrl: <%= @admin_service_url %>/oauth2
     kmUsername: <%= @keymanager_username %>
     kmPassword: <%= @keymanager_password %>
