@@ -76,6 +76,6 @@ class apim inherits apim::params {
     owner  => $user,
     group  => $user_group,
     mode   => '0777',
-    source => "puppet:///modules/${module_name}/mysql-connector-java-5.1.48.jar",
+    source => "puppet:///modules/apim/mysql-connector-java-5.1.48.jar",
   }
 }
