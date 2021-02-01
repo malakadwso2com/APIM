@@ -27,7 +27,7 @@ class apim::params inherits apim_common::params {
   ]
 
   # Define file list
-  $file_list = []
+  $file_list = ['repository/components/lib/mysql-connector-java-5.1.48.jar']
 
   # Define remove file list
   $file_removelist = []
