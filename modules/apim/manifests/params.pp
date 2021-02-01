@@ -27,7 +27,7 @@ class apim::params inherits apim_common::params {
   ]
 
   # Define file list
-  $file_list = ['repository/components/lib/mysql-connector-java-5.1.48.jar']
+  $file_list = ['repository/components/lib/mysql-connector-java-5.1.48.jar','repository/deployment/server/jaggeryapps/devportal/site/public/theme/settings.js','repository/deployment/server/jaggeryapps/admin/site/public/conf/settings.js','repository/deployment/server/jaggeryapps/publisher/site/public/conf/settings.js']
 
   # Define remove file list
   $file_removelist = []
