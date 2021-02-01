@@ -27,7 +27,7 @@ class apim::params inherits apim_common::params {
   ]
 
   # Define file list
-  $file_list = []
+  $file_list = ['repository/components/lib/mysql-connector-java-5.1.48.jar','repository/deployment/server/jaggeryapps/devportal/site/public/theme/settings.js','repository/deployment/server/jaggeryapps/admin/site/public/conf/settings.js','repository/deployment/server/jaggeryapps/publisher/site/public/conf/settings.js']
 
   # Define remove file list
   $file_removelist = []
@@ -39,9 +39,9 @@ class apim::params inherits apim_common::params {
      This is will become part of the End Point Reference of the
      services deployed on this server instance.
   */
-  $hostname = '35.202.10.219'
+  $hostname = 'api.am.wso2.com'
 
   # ----- api-manager.xml config params -----
-  $oauth_configs_revoke_api_url = 'https://35.202.10.219:${https.nio.port}/revoke'
-  $throttle_config_policy_deployer_url = 'https://35.202.10.219:${mgt.transport.https.port}${carbon.context}services/'
+  $oauth_configs_revoke_api_url = 'https://api.am.wso2.com:${https.nio.port}/revoke'
+  $throttle_config_policy_deployer_url = 'https://api.am.wso2.com:${mgt.transport.https.port}${carbon.context}services/'
 }

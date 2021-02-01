@@ -157,10 +157,10 @@ class apim_common::params {
       name                => 'Production and Sandbox',
       description         => 'This is a hybrid gateway that handles both production and sandbox token traffic.',
       server_url          => 'https://localhost:${mgt.transport.https.port}${carbon.context}services/',
-      ws_endpoint         => 'ws://localhost:9099',
-      wss_endpoint        => 'wss://localhost:8099',
-      http_endpoint       => 'http://localhost:${http.nio.port}',
-      https_endpoint      => 'https://localhost:${https.nio.port}'
+      ws_endpoint         => 'ws://gw.am.wso2.com:9099',
+      wss_endpoint        => 'wss://gw.am.wso2.com:8099',
+      http_endpoint       => 'http://gw.am.wso2.com:${http.nio.port}',
+      https_endpoint      => 'https://gw.am.wso2.com:${https.nio.port}'
     }
   ]
 
@@ -175,16 +175,16 @@ class apim_common::params {
 
   # ----- Master-datasources config params -----
 
-  $wso2am_db_url = 'jdbc:h2:./repository/database/WSO2AM_DB;DB_CLOSE_ON_EXIT=FALSE'
-  $wso2am_db_username = 'wso2carbon'
-  $wso2am_db_password = 'wso2carbon'
-  $wso2am_db_type = 'h2'
+  $wso2am_db_url = 'jdbc:mysql://35.184.28.215:3306/WSO2AM_DB?useSSL=false'
+  $wso2am_db_username = 'apimadmin'
+  $wso2am_db_password = 'apimadmin'
+  $wso2am_db_type = 'mysql'
   $wso2am_db_validation_query = 'SELECT 1'
 
-  $wso2shared_db_url = 'jdbc:h2:./repository/database/WSO2SHARED_DB;DB_CLOSE_ON_EXIT=FALSE'
-  $wso2shared_db_username = 'wso2carbon'
-  $wso2shared_db_password = 'wso2carbon'
-  $wso2shared_db_type = 'h2'
+  $wso2shared_db_url = 'jdbc:mysql://35.184.28.215:3306/WSO2SHARED_DB?useSSL=false'
+  $wso2shared_db_username = 'sharedadmin'
+  $wso2shared_db_password = 'sharedadmin'
+  $wso2shared_db_type = 'mysql'
   $wso2shared_db_validation_query = 'SELECT 1'
 
   # ----- Carbon.xml config params -----
