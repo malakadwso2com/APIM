@@ -36,7 +36,8 @@ class apim_analytics_worker::params inherits apim_common::params {
 
   # Carbon Configuration Parameters
   $wso2_carbon_id = 'wso2-am-analytics'
-  $ports_offset = 1
+  #$ports_offset = 1
+  $ports_offset = 0
 
   # Configuration used for the databridge communication
   $binary_data_receiver_tcp_pool_side = 100
@@ -73,7 +74,7 @@ class apim_analytics_worker::params inherits apim_common::params {
 
   $persistence_db_url = 'jdbc:h2:${sys:carbon.home}/wso2/${sys:wso2.runtime}/database/PERSISTENCE_DB;DB_CLOSE_ON_EXIT=FALSE;LOCK_TIMEOUT=60000;AUTO_SERVER=TRUE'
   $persistence_db_username = 'root'
-  $persistence_db_password = 'pass
+  $persistence_db_password = 'pass'
   $persistence_db_driver = 'com.mysql.jdbc.Driver'
   $persistence_db_test_query = 'SELECT 1'
 
@@ -95,7 +96,7 @@ class apim_analytics_worker::params inherits apim_common::params {
   $user_store_users = [
     {
       username  =>  'admin',
-      password  =>  'YWRtaW4=',
+      password  =>  'admin',
       roles     =>  1
     }
   ]

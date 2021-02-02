@@ -215,7 +215,8 @@ class apim_common::params {
   $databridge_config_worker_threads = 10
   $databridge_config_keystore_location = '${sys:carbon.home}/resources/security/wso2carbon.jks'
   $databridge_config_keystore_password = 'wso2carbon'
-  $binary_data_receiver_hostname = '127.0.0.1'
+  #$binary_data_receiver_hostname = '127.0.0.1'
+  $binary_data_receiver_hostname = '0.0.0.0'
   $tcp_receiver_thread_pool_size = 100
   $ssl_receiver_thread_pool_size = 100
 
@@ -245,15 +246,15 @@ class apim_common::params {
   $wso2_permissions_db_driver = 'org.h2.Driver'
   $wso2_permissions_db_test_query = 'SELECT 1'
 
-  $apim_analytics_db_url = 'jdbc:h2:${sys:carbon.home}/wso2/worker/database/WSO2AM_STATS_DB;AUTO_SERVER=TRUE'
-  $apim_analytics_db_username = 'wso2carbon'
-  $apim_analytics_db_password = 'wso2carbon'
-  $apim_analytics_db_driver = 'org.h2.Driver'
+  $apim_analytics_db_url = 'jdbc:mysql://35.184.28.215:3306/analytics_db?useSSL=false'
+  $apim_analytics_db_username = 'analyticsadmin'
+  $apim_analytics_db_password = 'analyticsadmin'
+  $apim_analytics_db_driver = 'com.mysql.jdbc.Driver'
   $apim_analytics_db_test_query = 'SELECT 1'
 
-  $am_db_url = 'jdbc:h2:${sys:carbon.home}/../wso2am-3.1.0/repository/database/WSO2AM_DB;AUTO_SERVER=TRUE'
-  $am_db_username = 'wso2carbon'
-  $am_db_password = 'wso2carbon'
-  $am_db_driver = 'org.h2.Driver'
+  $am_db_url = 'jdbc:mysql://35.184.28.215:3306/WSO2AM_DB?useSSL=false'
+  $am_db_username = 'apimadmin'
+  $am_db_password = 'apimadmin'
+  $am_db_driver = 'com.mysql.jdbc.Driver'
   $am_test_query = 'SELECT 1'
 }
