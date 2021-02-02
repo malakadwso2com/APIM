@@ -215,8 +215,8 @@ class apim_common::params {
   $databridge_config_worker_threads = 10
   $databridge_config_keystore_location = '${sys:carbon.home}/resources/security/wso2carbon.jks'
   $databridge_config_keystore_password = 'wso2carbon'
-  #$binary_data_receiver_hostname = '127.0.0.1'
-  $binary_data_receiver_hostname = '0.0.0.0'
+  $binary_data_receiver_hostname = '127.0.0.1'
+  #$binary_data_receiver_hostname = '0.0.0.0'
   $tcp_receiver_thread_pool_size = 100
   $ssl_receiver_thread_pool_size = 100
 
