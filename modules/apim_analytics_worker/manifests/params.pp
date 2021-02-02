@@ -27,7 +27,7 @@ class apim_analytics_worker::params inherits apim_common::params {
   ]
 
   # Define file list
-  $file_list = []
+  $file_list = ['lib/mysql-connector-java-5.1.48.jar','resources/security/client-truststore.jks']
 
   # Define remove file list
   $file_removelist = []
@@ -36,7 +36,8 @@ class apim_analytics_worker::params inherits apim_common::params {
 
   # Carbon Configuration Parameters
   $wso2_carbon_id = 'wso2-am-analytics'
-  $ports_offset = 1
+  #$ports_offset = 1
+  $ports_offset = 0
 
   # Configuration used for the databridge communication
   $binary_data_receiver_tcp_pool_side = 100
@@ -73,14 +74,14 @@ class apim_analytics_worker::params inherits apim_common::params {
 
   $persistence_db_url = 'jdbc:h2:${sys:carbon.home}/wso2/${sys:wso2.runtime}/database/PERSISTENCE_DB;DB_CLOSE_ON_EXIT=FALSE;LOCK_TIMEOUT=60000;AUTO_SERVER=TRUE'
   $persistence_db_username = 'root'
-  $persistence_db_password = 'pass
-  $persistence_db_driver = 'com.mysql.jdbc.Driver'
+  $persistence_db_password = 'pass'
+  $persistence_db_driver = 'org.h2.Driver'
   $persistence_db_test_query = 'SELECT 1'
 
   $cluster_db_url = 'jdbc:h2:${sys:carbon.home}/wso2/${sys:wso2.runtime}/database/WSO2_CLUSTER_DB;DB_CLOSE_ON_EXIT=FALSE;LOCK_TIMEOUT=60000;AUTO_SERVER=TRUE'
   $cluster_db_username = 'wso2carbon'
   $cluster_db_password = 'wso2carbon'
-  $cluster_db_driver = 'com.mysql.jdbc.Driver'
+  $cluster_db_driver = 'org.h2.Driver'
   $cluster_db_test_query = 'SELECT 1'
 
   # Cluster configurations
@@ -95,7 +96,7 @@ class apim_analytics_worker::params inherits apim_common::params {
   $user_store_users = [
     {
       username  =>  'admin',
-      password  =>  'YWRtaW4=',
+      password  =>  'admin',
       roles     =>  1
     }
   ]

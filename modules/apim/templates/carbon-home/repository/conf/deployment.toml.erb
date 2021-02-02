@@ -99,11 +99,11 @@ https_endpoint = "<%= environment['https_endpoint'] %>"
 
 [apim.analytics]
 enable = "<%= @analytics_enabled %>"
-receiver_username = "<%= @stream_processor_username %>"
-receiver_password = "<%= @stream_processor_password %>"
-store_api_url = "<%= @stream_processor_rest_api_url %>"
-store_api_username = "<%= @stream_processor_rest_api_username %>"
-store_api_password = "<%= @stream_processor_rest_api_password %>"
+#receiver_username = "<%= @stream_processor_username %>"
+#receiver_password = "<%= @stream_processor_password %>"
+#store_api_url = "<%= @stream_processor_rest_api_url %>"
+#store_api_username = "<%= @stream_processor_rest_api_username %>"
+#store_api_password = "<%= @stream_processor_rest_api_password %>"
 
 <% @analytics_url_group.each do |url_group| %>
 [[apim.analytics.url_group]]
