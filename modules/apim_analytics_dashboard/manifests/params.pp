@@ -27,7 +27,7 @@ class apim_analytics_dashboard::params inherits apim_common::params {
   ]
 
   # Define file list
-  $file_list = []
+  $file_list = ['lib/mysql-connector-java-5.1.48.jar','resources/security/client-truststore.jks']
 
   # Define remove file list
   $file_removelist = []
@@ -35,7 +35,7 @@ class apim_analytics_dashboard::params inherits apim_common::params {
   # -------------- Deployment.yaml Config -------------- #
 
   # Carbon Configuration Parameters
-  $ports_offset = 3
+  $ports_offset = 0
 
   $wso2_carbon_id = 'wso2-am-analytics'
 
@@ -50,16 +50,16 @@ class apim_analytics_dashboard::params inherits apim_common::params {
   $binary_data_receiver_ssl_port = 9711
 
   # Data Sources Configuration
-  $business_rules_db_url = 'jdbc:h2:${sys:carbon.home}/wso2/${sys:wso2.runtime}/database/BUSINESS_RULES_DB;DB_CLOSE_ON_EXIT=FALSE;LOCK_TIMEOUT=60000;MVCC=TRUE'
-  $business_rules_db_username = 'wso2carbon'
-  $business_rules_db_password = 'wso2carbon'
-  $business_rules_db_driver = 'org.h2.Driver'
+  $business_rules_db_url = 'jdbc:mysql://35.184.28.215:3306/BUSINESS_RULES_DB?useSSL=false'
+  $business_rules_db_username = 'analyticsadmin'
+  $business_rules_db_password = 'analyticsadmin'
+  $business_rules_db_driver = 'com.mysql.jdbc.Driver'
   $business_rules_db_test_query = 'SELECT 1'
 
-  $status_dashboard_db_url = 'jdbc:h2:${sys:carbon.home}/wso2/${sys:wso2.runtime}/database/wso2_status_dashboard;DB_CLOSE_ON_EXIT=FALSE;LOCK_TIMEOUT=60000;MVCC=TRUE'
-  $status_dashboard_db_username = 'wso2carbon'
-  $status_dashboard_db_password = 'wso2carbon'
-  $status_dashboard_db_driver = 'org.h2.Driver'
+  $status_dashboard_db_url = 'jdbc:mysql://35.184.28.215:3306/WSO2_DASHBOARD_DB?useSSL=false'
+  $status_dashboard_db_username = 'analyticsadmin'
+  $status_dashboard_db_password = 'analyticsadmin'
+  $status_dashboard_db_driver = 'com.mysql.jdbc.Driver'
 
   # wso2.business.rules.manager config
   $business_rules_manager_username = 'admin'
@@ -70,7 +70,7 @@ class apim_analytics_dashboard::params inherits apim_common::params {
   $default_listener_keystore_cert_pass = 'wso2carbon'
 
   # dashboard admin service configurations
-  $admin_service_url = 'https://localhost:9443'
+  $admin_service_url = 'https://api.am.wso2.com'
   $admin_service_username = 'admin'
   $admin_service_password = 'admin'
   $keymanager_username = 'admin'
@@ -81,7 +81,7 @@ class apim_analytics_dashboard::params inherits apim_common::params {
   # port: wso2_transport_msf4j_https_port of the worker node given under host_vars
   $worker_nodes = [
     {
-      ip => 'localhost',
+      ip => '10.128.15.202',
       port => '9444'
     }
   ]

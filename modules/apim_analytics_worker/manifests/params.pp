@@ -27,7 +27,7 @@ class apim_analytics_worker::params inherits apim_common::params {
   ]
 
   # Define file list
-  $file_list = ['lib/mysql-connector-java-5.1.48.jar']
+  $file_list = ['lib/mysql-connector-java-5.1.48.jar','resources/security/client-truststore.jks']
 
   # Define remove file list
   $file_removelist = []
