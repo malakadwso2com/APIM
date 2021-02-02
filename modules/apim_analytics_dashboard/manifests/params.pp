@@ -70,7 +70,7 @@ class apim_analytics_dashboard::params inherits apim_common::params {
   $default_listener_keystore_cert_pass = 'wso2carbon'
 
   # dashboard admin service configurations
-  $admin_service_url = 'https://analytics.am.wso2.com:9443'
+  $admin_service_url = 'https://34.67.84.51:9443'
   $admin_service_username = 'admin'
   $admin_service_password = 'admin'
   $keymanager_username = 'admin'
