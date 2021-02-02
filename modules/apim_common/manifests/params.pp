@@ -130,8 +130,8 @@ class apim_common::params {
   $stream_processor_rest_api_password = '${admin.password}'
   $analytics_url_group = [
     {
-      analytics_urls      => '"tcp://10.128.15.202:7612"',
-      analytics_auth_urls => '"ssl://10.128.15.202:7712"'
+      analytics_urls      => '"tcp://10.128.15.202:7611"',
+      analytics_auth_urls => '"ssl://10.128.15.202:7711"'
     }
   ]
 
