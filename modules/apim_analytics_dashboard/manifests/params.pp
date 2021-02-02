@@ -66,7 +66,7 @@ class apim_analytics_dashboard::params inherits apim_common::params {
   $business_rules_manager_password = 'admin'
 
   # transport.http configuration
-  $default_host = '0.0.0.0'
+  $default_host = 'analytics.am.wso2.com'
   $default_listener_keystore_cert_pass = 'wso2carbon'
 
   # dashboard admin service configurations
