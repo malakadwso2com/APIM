@@ -121,7 +121,7 @@ class apim_common::params {
   $try_sleep = 5
 
   # ----- api-manager.xml config params -----
-  $analytics_enabled = 'false'
+  $analytics_enabled = 'true'
   $stream_processor_username = '${admin.username}'
   $stream_processor_password = '${admin.password}'
   $stream_processor_rest_api_url = 'https://localhost:7444'
@@ -130,12 +130,8 @@ class apim_common::params {
   $stream_processor_rest_api_password = '${admin.password}'
   $analytics_url_group = [
     {
-      analytics_urls      => '"tcp://analytics1.local:7612"',
-      analytics_auth_urls => '"ssl://analytics1.local:7712"'
-    },
-    {
-      analytics_urls      => '"tcp://analytics2.local:7612"',
-      analytics_auth_urls => '"ssl://analytics2.local:7712"'
+      analytics_urls      => '"tcp://analytics.am.wso2.com:7612"',
+      analytics_auth_urls => '"ssl://analytics.am.wso2.com:7712"'
     }
   ]
 
