@@ -124,8 +124,8 @@ class apim_common::params {
   $analytics_enabled = 'true'
   $stream_processor_username = '${admin.username}'
   $stream_processor_password = '${admin.password}'
-  $stream_processor_rest_api_url = 'https://localhost:7444'
-  $stream_processor_restapi_url = 'https://localhost:7444'
+  $stream_processor_rest_api_url = 'https://analytics.am.wso2.com:7444'
+  $stream_processor_restapi_url = 'https://analytics.am.wso2.com:7444'
   $stream_processor_rest_api_username = '${admin.username}'
   $stream_processor_rest_api_password = '${admin.password}'
   $analytics_url_group = [
