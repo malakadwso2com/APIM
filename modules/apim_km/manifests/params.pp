@@ -45,5 +45,5 @@ class apim_km::params inherits apim_common::params {
      This is will become part of the End Point Reference of the
      services deployed on this server instance.
   */
-  $hostname = 'localhost'
+  $hostname = 'km.am.wso2.com'
 }

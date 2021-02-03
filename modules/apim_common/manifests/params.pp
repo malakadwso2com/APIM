@@ -121,7 +121,7 @@ class apim_common::params {
   $try_sleep = 5
 
   # ----- api-manager.xml config params -----
-  $analytics_enabled = 'true'
+  $analytics_enabled = 'false'
   $stream_processor_username = '${admin.username}'
   $stream_processor_password = '${admin.password}'
   $stream_processor_rest_api_url = 'https://localhost:7444'
